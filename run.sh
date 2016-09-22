@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "$FOREMAN_SERVER_IP $FOREMAN_SERVER_HOSTNAME" >> /etc/hosts
 
 # Fix the hostname problem by removing that check and setting a dummy FQDN:
 rm -f /usr/share/foreman-installer/checks/hostname.rb
