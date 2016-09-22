@@ -1,12 +1,12 @@
-FROM centos:6
+FROM centos
 
 MAINTAINER P Pavlov "ppavlov@nomail.com"
 
 # yum update
 RUN yum update -y
 
-RUN setenforce 0
-RUN sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+#RUN setenforce 0
+#RUN sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
 RUN echo "127.0.0.1    foreman.sainsburys.co.uk foreman" >> /etc/hosts
 
