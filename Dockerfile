@@ -8,13 +8,13 @@ RUN yum update -y
 #RUN setenforce 0
 #RUN sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
-RUN echo "127.0.0.1    foreman.sainsburys.co.uk foreman" >> /etc/hosts
+RUN echo "127.0.0.1   foreman.sainsburys.co.uk foreman" >> /etc/hosts
 
 # install the katello-repos
-RUN yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/3.1/katello/el6/x86_64/katello-repos-latest.rpm
-RUN yum -y localinstall http://yum.theforeman.org/releases/1.12/el6/x86_64/foreman-release.rpm
-RUN yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
-RUN yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+RUN yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/3.2/katello/el7/x86_64/katello-repos-latest.rpm
+RUN yum -y localinstall http://yum.theforeman.org/releases/nightly/el7/x86_64/foreman-release.rpm
+RUN yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+RUN yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum -y install foreman-release-scl
 
 # install katello
