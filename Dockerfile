@@ -8,7 +8,7 @@ RUN yum update -y
 #RUN setenforce 0
 #RUN sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
-RUN sed -i 's#localhost#foreman.sainsburys.co.uk foreman#' 
+RUN sed -i 's#localhost#foreman.sainsburys.co.uk foreman#'  /etc/hosts
 
 # install the katello-repos
 RUN yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/3.2/katello/el7/x86_64/katello-repos-latest.rpm
