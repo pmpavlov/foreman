@@ -1,0 +1,70 @@
+# Format:
+# <classname>: false - don't include this class
+# <classname>: true - include and use the defaults
+# <classname>:
+#   <param>: <value> - include and override the default(s)
+#
+# Every support plugin/compute class is listed, so that it
+# shows up in the interactive menu
+#
+# See params.pp in each class for what options are available
+---
+foreman:
+  custom_repo: true
+  foreman_url: "https://foreman.localhost.lan"
+  servername: foreman.testlocalhost.lan
+  ssl: true
+  repo: stable
+  db_type: mysql
+  db_adapter: mysql2
+  db_host: foreman-db.domain
+  db_port: 3306
+  db_manage: true
+  db_database: foreman
+  db_username: foreman
+  db_password: foreman_password
+foreman_proxy:
+  custom_repo: true
+puppet:
+  version: present
+  server: true
+foreman::cli: true
+foreman::plugin::ansible: false
+foreman::plugin::azure: false
+foreman::plugin::bootdisk: false
+foreman::plugin::chef: false
+foreman::plugin::cockpit: false
+foreman::plugin::default_hostgroup: false
+foreman::plugin::dhcp_browser: false
+foreman::plugin::digitalocean: false
+foreman::plugin::discovery: false
+foreman::plugin::docker: false
+foreman::plugin::expire_hosts: false
+foreman::plugin::host_extra_validator: false
+foreman::plugin::memcache: false
+foreman::plugin::openscap: false
+foreman::plugin::ovirt_provision: false
+foreman::plugin::tasks: false
+foreman::plugin::hooks: false
+foreman::plugin::puppetdb: false
+foreman::plugin::remote_execution: false
+foreman::plugin::salt: false
+foreman::plugin::setup: true
+foreman::plugin::templates: false
+foreman::compute::ec2: false
+foreman::compute::gce: false
+foreman::compute::libvirt: false
+foreman::compute::openstack: false
+foreman::compute::ovirt: false
+foreman::compute::rackspace: false
+foreman::compute::vmware: false
+foreman_proxy::plugin::abrt: false
+foreman_proxy::plugin::chef: false
+foreman_proxy::plugin::discovery: false
+foreman_proxy::plugin::dns::powerdns: false
+foreman_proxy::plugin::dynflow: false
+foreman_proxy::plugin::openscap: false
+foreman_proxy::plugin::pulp: false
+foreman_proxy::plugin::remote_execution::ssh: false
+foreman_proxy::plugin::salt: false
+
