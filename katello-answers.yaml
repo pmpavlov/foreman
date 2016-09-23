@@ -25,7 +25,7 @@ foreman:
   websockets_ssl_cert: /etc/pki/katello/certs/katello-apache.crt
 capsule:
   register_in_foreman: true
-  pulp_master: true
+  pulp_master: foreman
   puppet: true
   puppetca: true
   templates: false
