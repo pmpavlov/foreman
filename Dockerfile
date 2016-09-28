@@ -32,9 +32,14 @@ ADD capsule-answers.yaml /etc/foreman-installer/scenarios.d/capsule-answers.yaml
 EXPOSE 8140
 # foreman-proxy
 EXPOSE 8443
-# foreman (via apache)
-EXPOSE 443
+# foreman (via apache) and provisioning purposes
 EXPOSE 80
+# api communication
+EXPOSE 443
 EXPOSE 8080
+# qpid ssl 
+EXPOSE 5671
+# smart proxy
+EXPOSE 9090
 
 CMD ["/run.sh"]
